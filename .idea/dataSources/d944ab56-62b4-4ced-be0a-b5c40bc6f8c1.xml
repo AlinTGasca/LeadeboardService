@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sportify@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
+    <root id="1">
+      <ServerVersion>10.10</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="avt-2_0-app_development">
+      <ObjectId>32745</ObjectId>
+      <Owner>spark</Owner>
+    </database>
+    <database id="3" parent="1" name="avt-2_0-app_test">
+      <ObjectId>39528</ObjectId>
+      <Owner>spark</Owner>
+    </database>
+    <database id="4" parent="1" name="avt-2_5-app_development">
+      <ObjectId>62617</ObjectId>
+      <Owner>spark</Owner>
+    </database>
+    <database id="5" parent="1" name="avt-2_5-app_test">
+      <ObjectId>1182945</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="postgres">
+      <ObjectId>13055</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="sportify">
+      <ObjectId>1183980</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1249154</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Relations>sequence|table|1183989|1183991|1
+sequence|table|1184010|1184012|1
+sequence|table|1184033|1184035|1
+sequence|table|1184062|1184064|1
+sequence|table|1184075|1184077|1
+sequence|table|1184095|1184097|1
+sequence|table|1183981|1183983|1
+sequence|table|1184132|1184134|1
+sequence|table|1184145|1184147|1
+sequence|table|1184172|1184174|1
+sequence|table|1184188|1184190|1
+sequence|table|1184216|1184218|1
+</Relations>
+    </database>
+    <role id="8" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+    </role>
+    <role id="11" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="13" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="14" parent="1" name="spark">
+      <ObjectId>16384</ObjectId>
+      <SuperRole>1</SuperRole>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+    </role>
+    <schema id="15" parent="7" name="information_schema">
+      <ObjectId>12764</ObjectId>
+      <StateNumber>353</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="7" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>350</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="7" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>351</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1249155</IntrospectionStateNumber>
+      <Current>1</Current>
+    </schema>
+    <access-method id="18" parent="7" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="19" parent="7" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="20" parent="7" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="7" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="7" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="7" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="24" parent="7" name="plpgsql">
+      <ObjectId>13041</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>505</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="25" parent="17" name="complaints_complaint_id_seq">
+      <ObjectId>1184216</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="26" parent="17" name="events_event_id_seq">
+      <ObjectId>1184033</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="27" parent="17" name="matches_match_id_seq">
+      <ObjectId>1184145</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="28" parent="17" name="organizations_organization_id_seq">
+      <ObjectId>1183981</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="29" parent="17" name="points_point_id_seq">
+      <ObjectId>1184188</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="17" name="roles_role_id_seq">
+      <ObjectId>1184010</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="17" name="rounds_round_id_seq">
+      <ObjectId>1184172</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="17" name="rules_for_sports_rules_for_sport_id_seq">
+      <ObjectId>1184062</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="17" name="sports_sport_id_seq">
+      <ObjectId>1184075</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="17" name="stages_stage_id_seq">
+      <ObjectId>1184132</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="17" name="teams_team_id_seq">
+      <ObjectId>1184095</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="36" parent="17" name="users_user_id_seq">
+      <ObjectId>1183989</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="37" parent="17" name="complaints">
+      <ObjectId>1184218</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="38" parent="17" name="events">
+      <ObjectId>1184035</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="39" parent="17" name="matches">
+      <ObjectId>1184147</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="40" parent="17" name="organizations">
+      <ObjectId>1183983</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="41" parent="17" name="points">
+      <ObjectId>1184190</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="42" parent="17" name="roles">
+      <ObjectId>1184012</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="43" parent="17" name="rounds">
+      <ObjectId>1184174</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="44" parent="17" name="rules_for_sports">
+      <ObjectId>1184064</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="45" parent="17" name="sports">
+      <ObjectId>1184077</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="46" parent="17" name="stages">
+      <ObjectId>1184134</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="47" parent="17" name="teams">
+      <ObjectId>1184097</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249151</StateNumber>
+    </table>
+    <table id="48" parent="17" name="users">
+      <ObjectId>1183991</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="49" parent="17" name="users_events">
+      <ObjectId>1184047</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="50" parent="17" name="users_roles">
+      <ObjectId>1184018</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <table id="51" parent="17" name="users_teams">
+      <ObjectId>1184116</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1249146</StateNumber>
+    </table>
+    <column id="52" parent="37" name="complaint_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;complaints_complaint_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="53" parent="37" name="complaint_message">
+      <Position>2</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="54" parent="37" name="complainer_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="55" parent="37" name="complained_player_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="56" parent="37" name="complained_team_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="57" parent="37" name="complained_match_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="58" parent="37" name="complaints_pkey">
+      <ObjectId>1184223</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complaint_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="59" parent="37" name="complaints_pkey">
+      <ObjectId>1184224</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complaint_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>complaints_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="60" parent="37" name="complaints_complainer_id_fkey">
+      <ObjectId>1184225</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complainer_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="61" parent="37" name="complaints_complained_player_id_fkey">
+      <ObjectId>1184230</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complained_player_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="62" parent="37" name="complaints_complained_team_id_fkey">
+      <ObjectId>1184235</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complained_team_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="63" parent="37" name="complaints_complained_match_id_fkey">
+      <ObjectId>1184240</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complained_match_id</ColNames>
+      <RefTableId>1184147</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>matches</RefTableName>
+      <RefKeyName>matches_pkey</RefKeyName>
+      <RefColNames>match_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="64" parent="37" name="chk_null">
+      <ObjectId>1184222</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>complained_player_id
+complained_team_id
+complained_match_id</ColNames>
+      <Predicate>(complained_player_id IS NOT NULL) OR (complained_team_id IS NOT NULL) OR (complained_match_id IS NOT NULL)</Predicate>
+    </check>
+    <column id="65" parent="38" name="event_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;events_event_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="66" parent="38" name="event_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="38" name="start_date">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="68" parent="38" name="end_date">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="69" parent="38" name="organization_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="70" parent="38" name="events_pkey">
+      <ObjectId>1184040</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>event_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="71" parent="38" name="events_pkey">
+      <ObjectId>1184041</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>event_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>events_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="72" parent="38" name="events_organization_id_fkey">
+      <ObjectId>1184042</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>organization_id</ColNames>
+      <RefTableId>1183983</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>organizations</RefTableName>
+      <RefKeyName>organizations_pkey</RefKeyName>
+      <RefColNames>organization_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="73" parent="38" name="events_check">
+      <ObjectId>1184039</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>end_date
+start_date</ColNames>
+      <Predicate>end_date &gt; start_date</Predicate>
+    </check>
+    <column id="74" parent="39" name="match_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;matches_match_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="75" parent="39" name="date_time_start">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="76" parent="39" name="date_time_end">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="77" parent="39" name="first_team_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="78" parent="39" name="second_team_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="79" parent="39" name="stage_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="80" parent="39" name="matches_pkey">
+      <ObjectId>1184153</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>match_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="81" parent="39" name="unique_matches_per_stage">
+      <ObjectId>1184155</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>first_team_id
+second_team_id
+stage_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="39" name="matches_pkey">
+      <ObjectId>1184154</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>match_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>matches_pkey</UnderlyingIndexName>
+    </key>
+    <key id="83" parent="39" name="unique_matches_per_stage">
+      <ObjectId>1184156</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>first_team_id
+second_team_id
+stage_id</ColNames>
+      <UnderlyingIndexName>unique_matches_per_stage</UnderlyingIndexName>
+    </key>
+    <foreign-key id="84" parent="39" name="matches_first_team_id_fkey">
+      <ObjectId>1184157</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>first_team_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="85" parent="39" name="matches_second_team_id_fkey">
+      <ObjectId>1184162</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>second_team_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="86" parent="39" name="matches_stage_id_fkey">
+      <ObjectId>1184167</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>stage_id</ColNames>
+      <RefTableId>1184134</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>stages</RefTableName>
+      <RefKeyName>stages_pkey</RefKeyName>
+      <RefColNames>stage_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="87" parent="39" name="matches_check">
+      <ObjectId>1184151</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>date_time_end
+date_time_start</ColNames>
+      <Predicate>date_time_end &gt; date_time_start</Predicate>
+    </check>
+    <check id="88" parent="39" name="different_team_ids">
+      <ObjectId>1184152</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>first_team_id
+second_team_id</ColNames>
+      <Predicate>first_team_id &lt;&gt; second_team_id</Predicate>
+    </check>
+    <column id="89" parent="40" name="organization_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;organizations_organization_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="90" parent="40" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="91" parent="40" name="domain">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="92" parent="40" name="organizations_pkey">
+      <ObjectId>1183987</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>organization_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="93" parent="40" name="organizations_pkey">
+      <ObjectId>1183988</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>organization_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>organizations_pkey</UnderlyingIndexName>
+    </key>
+    <column id="94" parent="41" name="point_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;points_point_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="95" parent="41" name="date_time_score">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="96" parent="41" name="player_score_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="97" parent="41" name="team_score_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="98" parent="41" name="team_against_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="99" parent="41" name="round_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="100" parent="41" name="points_pkey">
+      <ObjectId>1184194</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>point_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="101" parent="41" name="points_pkey">
+      <ObjectId>1184195</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>point_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>points_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="102" parent="41" name="points_player_score_id_fkey">
+      <ObjectId>1184196</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>player_score_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="103" parent="41" name="points_team_score_id_fkey">
+      <ObjectId>1184201</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>team_score_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="104" parent="41" name="points_team_against_id_fkey">
+      <ObjectId>1184206</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>team_against_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="105" parent="41" name="points_round_id_fkey">
+      <ObjectId>1184211</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>round_id</ColNames>
+      <RefTableId>1184174</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>rounds</RefTableName>
+      <RefKeyName>rounds_pkey</RefKeyName>
+      <RefColNames>round_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="106" parent="42" name="role_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;roles_role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="107" parent="42" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="108" parent="42" name="roles_pkey">
+      <ObjectId>1184016</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>role_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="109" parent="42" name="roles_pkey">
+      <ObjectId>1184017</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>role_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>roles_pkey</UnderlyingIndexName>
+    </key>
+    <column id="110" parent="43" name="round_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;rounds_round_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="111" parent="43" name="number_round">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="112" parent="43" name="date_time_start">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="113" parent="43" name="date_time_end">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="114" parent="43" name="overtime">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="115" parent="43" name="match_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="116" parent="43" name="rounds_pkey">
+      <ObjectId>1184181</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>round_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="117" parent="43" name="rounds_pkey">
+      <ObjectId>1184182</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>round_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>rounds_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="118" parent="43" name="rounds_match_id_fkey">
+      <ObjectId>1184183</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>match_id</ColNames>
+      <RefTableId>1184147</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>matches</RefTableName>
+      <RefKeyName>matches_pkey</RefKeyName>
+      <RefColNames>match_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="119" parent="43" name="rounds_check">
+      <ObjectId>1184179</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>date_time_end
+date_time_start</ColNames>
+      <Predicate>date_time_end &gt; date_time_start</Predicate>
+    </check>
+    <check id="120" parent="43" name="rounds_number_round_check">
+      <ObjectId>1184178</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>number_round</ColNames>
+      <Predicate>number_round &gt; 0</Predicate>
+    </check>
+    <check id="121" parent="43" name="rounds_overtime_check">
+      <ObjectId>1184180</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>overtime</ColNames>
+      <Predicate>overtime &gt; 0</Predicate>
+    </check>
+    <column id="122" parent="44" name="rules_for_sport_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;rules_for_sports_rules_for_sport_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="123" parent="44" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="124" parent="44" name="number_of_rounds">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="125" parent="44" name="round_durations">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="126" parent="44" name="point_per_victory">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="127" parent="44" name="players_per_team">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="128" parent="44" name="victory_condition">
+      <Position>7</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="129" parent="44" name="number_of_stages">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="130" parent="44" name="rules_for_sports_pkey">
+      <ObjectId>1184073</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>rules_for_sport_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="131" parent="44" name="rules_for_sports_pkey">
+      <ObjectId>1184074</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>rules_for_sport_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>rules_for_sports_pkey</UnderlyingIndexName>
+    </key>
+    <check id="132" parent="44" name="rules_for_sports_number_of_rounds_check">
+      <ObjectId>1184068</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>number_of_rounds</ColNames>
+      <Predicate>number_of_rounds &gt; 0</Predicate>
+    </check>
+    <check id="133" parent="44" name="rules_for_sports_number_of_stages_check">
+      <ObjectId>1184072</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>number_of_stages</ColNames>
+      <Predicate>number_of_stages &gt; 0</Predicate>
+    </check>
+    <check id="134" parent="44" name="rules_for_sports_players_per_team_check">
+      <ObjectId>1184071</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>players_per_team</ColNames>
+      <Predicate>players_per_team &gt; 0</Predicate>
+    </check>
+    <check id="135" parent="44" name="rules_for_sports_point_per_victory_check">
+      <ObjectId>1184070</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>point_per_victory</ColNames>
+      <Predicate>point_per_victory &gt; 0</Predicate>
+    </check>
+    <check id="136" parent="44" name="rules_for_sports_round_durations_check">
+      <ObjectId>1184069</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>round_durations</ColNames>
+      <Predicate>round_durations &gt; 0</Predicate>
+    </check>
+    <column id="137" parent="45" name="sport_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;sports_sport_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="138" parent="45" name="start_date">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="139" parent="45" name="end_date">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="140" parent="45" name="prize">
+      <Position>4</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="141" parent="45" name="number_participants">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="142" parent="45" name="event_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="143" parent="45" name="rules_for_sport_id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="144" parent="45" name="sports_pkey">
+      <ObjectId>1184083</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>sport_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="145" parent="45" name="sports_pkey">
+      <ObjectId>1184084</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>sport_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sports_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="146" parent="45" name="sports_event_id_fkey">
+      <ObjectId>1184085</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>event_id</ColNames>
+      <RefTableId>1184035</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>events</RefTableName>
+      <RefKeyName>events_pkey</RefKeyName>
+      <RefColNames>event_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="147" parent="45" name="sports_rules_for_sport_id_fkey">
+      <ObjectId>1184090</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>rules_for_sport_id</ColNames>
+      <RefTableId>1184064</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>rules_for_sports</RefTableName>
+      <RefKeyName>rules_for_sports_pkey</RefKeyName>
+      <RefColNames>rules_for_sport_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="148" parent="45" name="sports_check">
+      <ObjectId>1184081</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>end_date
+start_date</ColNames>
+      <Predicate>end_date &gt; start_date</Predicate>
+    </check>
+    <check id="149" parent="45" name="sports_number_participants_check">
+      <ObjectId>1184082</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>number_participants</ColNames>
+      <Predicate>number_participants &gt; 1</Predicate>
+    </check>
+    <column id="150" parent="46" name="stage_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;stages_stage_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="151" parent="46" name="stage_number">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="152" parent="46" name="sport_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="153" parent="46" name="stages_pkey">
+      <ObjectId>1184138</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>stage_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="154" parent="46" name="stages_pkey">
+      <ObjectId>1184139</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>stage_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>stages_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="155" parent="46" name="stages_sport_id_fkey">
+      <ObjectId>1184140</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>sport_id</ColNames>
+      <RefTableId>1184077</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>sports</RefTableName>
+      <RefKeyName>sports_pkey</RefKeyName>
+      <RefColNames>sport_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="156" parent="47" name="team_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;teams_team_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="157" parent="47" name="accepted">
+      <Position>2</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="158" parent="47" name="captain_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="159" parent="47" name="sport_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="160" parent="47" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1249151</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="161" parent="47" name="teams_pkey">
+      <ObjectId>1184102</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>team_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="162" parent="47" name="teams_captain_id_sport_id_key">
+      <ObjectId>1184104</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>captain_id
+sport_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="163" parent="47" name="teams_pkey">
+      <ObjectId>1184103</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>team_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>teams_pkey</UnderlyingIndexName>
+    </key>
+    <key id="164" parent="47" name="teams_captain_id_sport_id_key">
+      <ObjectId>1184105</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>captain_id
+sport_id</ColNames>
+      <UnderlyingIndexName>teams_captain_id_sport_id_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="165" parent="47" name="teams_captain_id_fkey">
+      <ObjectId>1184106</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>captain_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="166" parent="47" name="teams_sport_id_fkey">
+      <ObjectId>1184111</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>sport_id</ColNames>
+      <RefTableId>1184077</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>sports</RefTableName>
+      <RefKeyName>sports_pkey</RefKeyName>
+      <RefColNames>sport_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="167" parent="48" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>nextval(&apos;users_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="168" parent="48" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="169" parent="48" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="170" parent="48" name="password">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="171" parent="48" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="172" parent="48" name="token">
+      <Position>6</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="173" parent="48" name="organization_id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="174" parent="48" name="player_rating">
+      <Position>8</Position>
+      <DataType>numeric|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>0.00</DefaultExpression>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="175" parent="48" name="users_pkey">
+      <ObjectId>1183999</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="176" parent="48" name="users_email_key">
+      <ObjectId>1184001</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="177" parent="48" name="users_token_key">
+      <ObjectId>1184003</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>token</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="178" parent="48" name="users_pkey">
+      <ObjectId>1184000</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+    </key>
+    <key id="179" parent="48" name="users_email_key">
+      <ObjectId>1184002</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>users_email_key</UnderlyingIndexName>
+    </key>
+    <key id="180" parent="48" name="users_token_key">
+      <ObjectId>1184004</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>token</ColNames>
+      <UnderlyingIndexName>users_token_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="181" parent="48" name="users_organization_id_fkey">
+      <ObjectId>1184005</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>organization_id</ColNames>
+      <RefTableId>1183983</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>organizations</RefTableName>
+      <RefKeyName>organizations_pkey</RefKeyName>
+      <RefColNames>organization_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="182" parent="49" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="183" parent="49" name="event_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="184" parent="49" name="users_events_pkey">
+      <ObjectId>1184050</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+event_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="185" parent="49" name="users_events_pkey">
+      <ObjectId>1184051</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+event_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_events_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="186" parent="49" name="users_events_user_id_fkey">
+      <ObjectId>1184052</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="187" parent="49" name="users_events_event_id_fkey">
+      <ObjectId>1184057</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>event_id</ColNames>
+      <RefTableId>1184035</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>events</RefTableName>
+      <RefKeyName>events_pkey</RefKeyName>
+      <RefColNames>event_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="188" parent="50" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="189" parent="50" name="role_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="190" parent="50" name="users_roles_pkey">
+      <ObjectId>1184021</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+role_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="191" parent="50" name="users_roles_pkey">
+      <ObjectId>1184022</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+role_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_roles_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="192" parent="50" name="users_roles_user_id_fkey">
+      <ObjectId>1184023</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="193" parent="50" name="users_roles_role_id_fkey">
+      <ObjectId>1184028</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>role_id</ColNames>
+      <RefTableId>1184012</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>roles</RefTableName>
+      <RefKeyName>roles_pkey</RefKeyName>
+      <RefColNames>role_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="194" parent="51" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="195" parent="51" name="team_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="196" parent="51" name="accepted">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1249146</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="197" parent="51" name="users_teams_pkey">
+      <ObjectId>1184120</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+team_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="198" parent="51" name="users_teams_pkey">
+      <ObjectId>1184121</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id
+team_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_teams_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="199" parent="51" name="users_teams_user_id_fkey">
+      <ObjectId>1184122</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>1183991</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="200" parent="51" name="users_teams_team_id_fkey">
+      <ObjectId>1184127</ObjectId>
+      <StateNumber>1249146</StateNumber>
+      <ColNames>team_id</ColNames>
+      <RefTableId>1184097</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>team_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
