@@ -30,18 +30,18 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>1249154</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|1183989|1183991|1
-sequence|table|1184010|1184012|1
-sequence|table|1184033|1184035|1
-sequence|table|1184062|1184064|1
-sequence|table|1184075|1184077|1
-sequence|table|1184095|1184097|1
-sequence|table|1183981|1183983|1
-sequence|table|1184132|1184134|1
+      <Relations>sequence|table|1184132|1184134|1
 sequence|table|1184145|1184147|1
 sequence|table|1184172|1184174|1
 sequence|table|1184188|1184190|1
+sequence|table|1184062|1184064|1
+sequence|table|1184075|1184077|1
+sequence|table|1184095|1184097|1
 sequence|table|1184216|1184218|1
+sequence|table|1184010|1184012|1
+sequence|table|1184033|1184035|1
+sequence|table|1183989|1183991|1
+sequence|table|1183981|1183983|1
 </Relations>
     </database>
     <role id="8" parent="1" name="pg_monitor">
