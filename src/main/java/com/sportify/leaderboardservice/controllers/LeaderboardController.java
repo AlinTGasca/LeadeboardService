@@ -1,10 +1,13 @@
 package com.sportify.leaderboardservice.controllers;
 
+import com.sportify.leaderboardservice.strategy.LeaderboardContext;
+import com.sportify.leaderboardservice.strategy.PointsBased;
+import com.sportify.leaderboardservice.strategy.RoundsBased;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
+import javax.swing.*;
 import java.util.List;
 import java.util.Map;
 
@@ -17,52 +20,21 @@ public class LeaderboardController {
 
     @GetMapping (path = "/sport/{sportId}/stageStart/{stageStart}/stageEnd/{stageEnd}")
     public List<Map<String, Object>> getLeaderboard(@PathVariable int sportId, @PathVariable int stageStart, @PathVariable int stageEnd) {
-        String sql = "WITH stage_matches AS\n" +
-                "(SELECT *\n" +
-                "FROM matches\n" +
-                "WHERE stage_id BETWEEN ? AND ?)\n" +
-                "SELECT teams.name, \n" +
-                "(SELECT count (*)\n" +
-                "FROM stage_matches\n" +
-                "WHERE (first_team_id = teams.team_id or second_team_id = teams.team_id)) AS no_matches,\n" +
-                "(rules_for_sports.point_per_victory * (SELECT count(stage_matches.match_id)\n" +
-                "FROM stage_matches\n" +
-                "WHERE (first_team_id = teams.team_id or second_team_id = teams.team_id) AND \n" +
-                "(SELECT COALESCE(sum(point_value),0)\n" +
-                "FROM points\n" +
-                "RIGHT OUTER JOIN rounds ON (points.round_id = rounds.round_id)\n" +
-                "WHERE team_score_id = teams.team_id AND stage_matches.match_id = rounds.match_id)\n" +
-                "> (SELECT COALESCE(sum(point_value),0)\n" +
-                "FROM points\n" +
-                "RIGHT OUTER JOIN rounds ON (points.round_id = rounds.round_id)\n" +
-                "WHERE team_score_id != teams.team_id and stage_matches.match_id = rounds.match_id)) +\n" +
-                "(SELECT count(stage_matches.match_id)\n" +
-                "FROM stage_matches\n" +
-                "WHERE (first_team_id = teams.team_id or second_team_id = teams.team_id) AND \n" +
-                "(SELECT COALESCE(sum(point_value),0)\n" +
-                "FROM points\n" +
-                "RIGHT OUTER JOIN rounds ON (points.round_id = rounds.round_id)\n" +
-                "WHERE team_score_id = teams.team_id AND stage_matches.match_id = rounds.match_id)\n" +
-                "= (SELECT COALESCE(sum(point_value),0) \n" +
-                "FROM points\n" +
-                "RIGHT OUTER JOIN rounds ON (points.round_id = rounds.round_id)\n" +
-                "WHERE team_score_id != teams.team_id and stage_matches.match_id = rounds.match_id))) AS points\n" +
-                "FROM teams JOIN sports ON (sports.sport_id = teams.sport_id) \n" +
-                "JOIN rules_for_sports on (rules_for_sports.rules_for_sport_id = sports.rules_for_sport_id)\n" +
-                "WHERE teams.sport_id = ? and teams.accepted = true\n" +
-                "ORDER BY points DESC;" ;
+        String sql = "SELECT victory_condition\n" +
+                "FROM rules_for_sports\n" +
+                "JOIN sports on (sports.rules_for_sport_id = sports.sport_id)\n" +
+                "WHERE sport_id = ?;";
+        String victory_condition = (String) jdbcTemplate.queryForObject(sql, new Object[] { sportId }, String.class);
+        LeaderboardContext context = null;
+        if (victory_condition.equals("points at the end"))
+            context = new LeaderboardContext(new PointsBased());
+        else if (victory_condition.equals("rounds at the end"))
+            context = new LeaderboardContext(new RoundsBased());
 
-        List<Map<String, Object>> leaderboard = jdbcTemplate.queryForList(sql, stageStart, stageEnd, sportId);
+
+
+        List<Map<String, Object>> leaderboard = context.executeStrategy(stageStart, stageEnd, sportId, jdbcTemplate);
 
         return leaderboard;
-    }
-
-    @GetMapping (path = "/test")
-    public HashMap<String, String> getTest() {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("key", "value");
-        map.put("foo", "bar");
-        map.put("aa", "bb");
-        return map;
     }
 }
